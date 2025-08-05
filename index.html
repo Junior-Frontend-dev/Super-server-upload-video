@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V-Hub AI</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍿</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --background: #0a0a10;
+        --surface: #101018;
+        --surface-glass: rgba(16, 16, 24, 0.5);
+        --border-color: rgba(255, 255, 255, 0.1);
+        --accent: #f59e0b; /* amber-500 */
+        --accent-hover: #fbbf24; /* amber-400 */
+        --text-primary: #f8fafc; /* slate-50 */
+        --text-secondary: #94a3b8; /* slate-400 */
+        --text-tertiary: #475569; /* slate-600 */
+      }
+      /* Custom scrollbar for better aesthetics */
+      ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--background);
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #2a2a3a;
+        border-radius: 10px;
+        border: 3px solid var(--background);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3a3a4a;
+      }
+      body {
+        font-family: 'Sora', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: var(--background);
+        background-image: radial-gradient(circle at top, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+        background-attachment: fixed;
+        color: var(--text-primary);
+      }
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translate(0, -20px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translate(0, 0) scale(1);
+        }
+      }
+      .animate-fade-in-down {
+        animation: fadeInDown 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+      }
+      
+      @keyframes toast-in {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .animate-toast-in {
+        animation: toast-in 0.5s cubic-bezier(0.21, 1.02, 0.73, 1) forwards;
+      }
+
+      @keyframes svip-glow {
+        0% { box-shadow: 0 0 3px #f472b6, 0 0 5px #f472b6; }
+        50% { box-shadow: 0 0 8px #ec4899, 0 0 12px #ec4899; }
+        100% { box-shadow: 0 0 3px #f472b6, 0 0 5px #f472b6; }
+      }
+      .svip-badge-glow {
+        animation: svip-glow 3s ease-in-out infinite;
+      }
+
+      @keyframes vip-glow {
+        0% { box-shadow: 0 0 3px #38bdf8, 0 0 5px #38bdf8; }
+        50% { box-shadow: 0 0 8px #0ea5e9, 0 0 12px #0ea5e9; }
+        100% { box-shadow: 0 0 3px #38bdf8, 0 0 5px #38bdf8; }
+      }
+      .vip-badge-glow {
+        animation: vip-glow 3s ease-in-out infinite;
+      }
+
+      .vip-comment {
+        border-left: 3px solid #0ea5e9;
+        padding-left: 12px;
+        background: linear-gradient(to right, rgba(14, 165, 233, 0.08), transparent);
+      }
+
+      .svip-comment {
+        border-left: 3px solid #ec4899;
+        padding-left: 12px;
+        background: linear-gradient(to right, rgba(236, 72, 153, 0.08), transparent);
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.12.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.536.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

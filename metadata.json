@@ -1,0 +1,6 @@
+{
+  "name": "Pro UploadVid Dark",
+  "description": "An advanced video uploading platform with an admin panel for management and an AI-powered feature to automatically generate video summaries using Google's Gemini API.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
